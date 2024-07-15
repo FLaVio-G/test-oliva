@@ -2,6 +2,9 @@ import styled from "styled-components";
 import { BREAKPOINTS } from "../styles/Breakpoints";
 import { Input, Form, Checkbox, Button, Select } from "antd";
 
+import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
+import "react-phone-number-input/style.css";
+
 import { useState } from "react";
 
 const StyledInputTwo = styled(Input)`
@@ -59,7 +62,7 @@ const StyledFormItemThree = styled(Form.Item)`
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: space-between; // Alinha os itens de forma que ocupem o espaço total
+  justify-content: space-between;
 `;
 
 const StyledCheckbox = styled(Checkbox)`
@@ -310,7 +313,6 @@ const { Option } = Select;
 
 const StyledSelect = styled(Select)`
   width: 26.4375rem;
-  height: 2.5rem;
   height: 3.5rem;
   font-size: 1.25rem;
   border: 0.09375rem solid #c6b92d;
@@ -349,7 +351,64 @@ export const StyledLabel = styled.label`
   display: block;
 `;
 
+const InputContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: start;
+  width: 26.4375rem;
+  height: auto;
+`;
+
+const StyledPhoneInput = styled(PhoneInput)`
+  border: 0.09375rem solid #c6b92d;
+  border-radius: 0.5rem;
+  width: 26.4375rem;
+  height: 3.5rem;
+  font-size: 1.25rem;
+  outline: none;
+
+  .PhoneInputCountry {
+    margin-left: 0.5rem;
+  }
+
+  &:hover {
+    border-color: #c6b92d;
+    outline: none;
+  }
+
+  &:focus {
+    border-color: #c6b92d;
+
+    outline: none;
+  }
+
+  @media (max-width: ${BREAKPOINTS.LG}) {
+    height: 3.5rem;
+    height: auto;
+  }
+
+  @media (max-width: ${BREAKPOINTS.SM}) {
+    height: 3.5rem;
+    height: auto;
+  }
+
+  @media (max-width: ${BREAKPOINTS.XS}) {
+    width: 250px;
+    height: 3.5rem;
+    margin-top: 0;
+  }
+`;
+
+const P1 = styled.p`
+  font-size: 20px;
+  font-weight: 700;
+  color: #5d5d5d;
+`;
+
 const SessionFive = () => {
+  const [value, setValue] = useState("");
+
   const onFinish = (values: any) => {
     console.log("Received values of form: ", values);
   };
@@ -407,14 +466,18 @@ const SessionFive = () => {
           </DivFormThree>
 
           <DivFormThree>
-            <StyledFormItem
-              name="phone"
-              label={<StyledLabel>Telefone</StyledLabel>}
-              layout="vertical"
-            >
-              <StyledInput />
-            </StyledFormItem>
-
+            <InputContainer>
+              <P1>Telefone</P1>
+              <StyledPhoneInput
+                placeholder="Telefone"
+                value={value}
+                onChange={setValue}
+                defaultCountry="BR"
+              />
+              {value && !isValidPhoneNumber(value) && (
+                <p style={{ color: "red" }}>Número de telefone inválido</p>
+              )}
+            </InputContainer>
             <StyledFormItem
               label={<StyledLabel>Qual sua função na empresa</StyledLabel>}
               name="function"
