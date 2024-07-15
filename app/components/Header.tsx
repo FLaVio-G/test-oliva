@@ -119,78 +119,27 @@ const StyledImageOne = styled(Image)`
 const items: MenuProps["items"] = [
   {
     key: "1",
-    label: (
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.antgroup.com"
-      >
-        Sobre o teste
-      </a>
-    ),
+    label: <a href="#session-one">Sobre o teste</a>,
   },
   {
     key: "2",
-    label: (
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.aliyun.com"
-      >
-        SEO
-      </a>
-    ),
+    label: <a href="#session-two">SEO</a>,
   },
   {
     key: "3",
-    label: (
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.luohanacademy.com"
-      >
-        Perfomance
-      </a>
-    ),
+    label: <a href="#session-three">Performance</a>,
   },
-
   {
     key: "4",
-    label: (
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.luohanacademy.com"
-      >
-        Blog
-      </a>
-    ),
+    label: <a href="#session-four">Blog</a>,
   },
-
   {
     key: "5",
-    label: (
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.luohanacademy.com"
-      >
-        Contato
-      </a>
-    ),
+    label: <a href="#session-five">Contato</a>,
   },
-
   {
     key: "6",
-    label: (
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.luohanacademy.com"
-      >
-        Procurar
-      </a>
-    ),
+    label: <a href="#session-six">Procurar</a>,
   },
 ];
 
