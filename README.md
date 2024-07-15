@@ -15,12 +15,19 @@ npm run dev
 # or
 yarn dev
 # or
-pnpm dev
-# or
+
 bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+# or
+
+Acess this link 
+
+https://test-oliva.netlify.app
+
+
 
 ![image](https://github.com/FLaVio-G/test-oliva/assets/56455753/ca85f120-c171-4817-9335-6d719f0fd5a5)
 
