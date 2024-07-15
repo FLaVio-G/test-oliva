@@ -1,38 +1,38 @@
-## Getting Started
+## Como Rodar o Projeto?
 
-First, run the development server:
+Primeiro, instale as dependências e inicie o servidor de desenvolvimento:
 
 ```bash
 npm i
-# or
+# ou
 npm install
 
 yarn i
-# or
+# ou
 yarn install
 
 npm run dev
-# or
+# ou
 yarn dev
-# or
 
-bun dev
-```
+Depois, abra http://localhost:3000 no seu navegador para ver o resultado.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-# or
-
-Acess this link 
+Acesso Online
+Você também pode acessar o projeto online pelo link:
 
 https://test-oliva.netlify.app
 
 
 
-![image](https://github.com/FLaVio-G/test-oliva/assets/56455753/ca85f120-c171-4817-9335-6d719f0fd5a5)
+Sobre o Projeto
+Este projeto foi criado usando Next.js, uma poderosa framework para aplicações React que permite renderização do lado do servidor, geração de sites estáticos e muito mais.
 
-To learn more about Next.js, take a look at the following resources:
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Aprendendo Mais sobre Next.js
+Para aprender mais sobre Next.js, consulte os seguintes recursos:
 
+Documentação do Next.js - descubra os recursos e a API do Next.js.
+Aprenda Next.js - um tutorial interativo para iniciantes.
+perl
+Copiar código
 
+Basta copiar e colar no seu README!
