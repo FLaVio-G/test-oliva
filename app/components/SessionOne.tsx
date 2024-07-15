@@ -4,6 +4,8 @@ import { Button } from "antd";
 import Image from "next/image";
 import officeImage from "../../public/office-image.png";
 
+import icon3 from "../../public/Frame 40.svg";
+
 const MainContainerOne = styled.div`
   display: flex;
   flex-direction: row;
@@ -147,30 +149,52 @@ const StyledImageTwo = styled(Image)`
   }
 `;
 
+const DivOne = styled.div`
+  display: flex;
+  width: 95%;
+  align-items: end;
+  justify-content: end;
+`;
+
+const StyledSVGEight = styled(Image)`
+  width: 4.063;
+  height: 4.063;
+
+  @media (max-width: ${BREAKPOINTS.XS}) {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+`;
+
 const SessionOne = () => {
   return (
-    <MainContainerOne>
-      <MainDivOne>
-        <H1>Teste de desenvolvimento</H1>
-        <H2>Front-end Next.JS</H2>
-        <P>
-          Bem-vindo ao nosso desafio de codificação React! Este teste avalia
-          suas habilidades em desenvolver aplicações web interativas com React.
-          Sua tarefa é construir uma aplicação que interaja com APIs externas e
-          exiba dados de forma clara e eficiente. Estamos ansiosos para ver sua
-          criatividade e qualidade de código em prática.
-        </P>
-        <ButtonTwo>Entrar em contato</ButtonTwo>
-      </MainDivOne>
-      <div>
-        <StyledImageTwo
-          src={officeImage}
-          width={530}
-          height={528}
-          alt={"office image"}
-        />
-      </div>
-    </MainContainerOne>
+    <>
+      <MainContainerOne>
+        <MainDivOne>
+          <H1>Teste de desenvolvimento</H1>
+          <H2>Front-end Next.JS</H2>
+          <P>
+            Bem-vindo ao nosso desafio de codificação React! Este teste avalia
+            suas habilidades em desenvolver aplicações web interativas com
+            React. Sua tarefa é construir uma aplicação que interaja com APIs
+            externas e exiba dados de forma clara e eficiente. Estamos ansiosos
+            para ver sua criatividade e qualidade de código em prática.
+          </P>
+          <ButtonTwo>Entrar em contato</ButtonTwo>
+        </MainDivOne>
+        <div>
+          <StyledImageTwo
+            src={officeImage}
+            width={530}
+            height={528}
+            alt={"office image"}
+          />
+        </div>
+      </MainContainerOne>
+      <DivOne>
+        <StyledSVGEight src={icon3} alt="Logo" />
+      </DivOne>
+    </>
   );
 };
 
