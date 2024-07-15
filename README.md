@@ -27,12 +27,5 @@ https://test-oliva.netlify.app
 Sobre o Projeto
 Este projeto foi criado usando Next.js, uma poderosa framework para aplicações React que permite renderização do lado do servidor, geração de sites estáticos e muito mais.
 
-Aprendendo Mais sobre Next.js
-Para aprender mais sobre Next.js, consulte os seguintes recursos:
+![image](https://github.com/user-attachments/assets/e967e0c4-d832-49d0-ba75-8696b428d279)
 
-Documentação do Next.js - descubra os recursos e a API do Next.js.
-Aprenda Next.js - um tutorial interativo para iniciantes.
-perl
-Copiar código
-
-Basta copiar e colar no seu README!
