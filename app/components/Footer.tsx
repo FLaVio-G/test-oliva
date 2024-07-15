@@ -15,14 +15,18 @@ const FooterContainer = styled.footer`
   width: 100%;
   background-color: #e6e6e6;
   text-align: center;
-  height: 227px;
-  margin-top: 120px;
+  height: 14.1875rem;
+  margin-top: 7.5rem;
 
   @media (max-width: ${BREAKPOINTS.LG}) {
+    height: auto;
+    padding: 1.25rem 0;
   }
 
   @media (max-width: ${BREAKPOINTS.SM}) {
+    margin-top: 3.75rem;
   }
+
   @media (max-width: ${BREAKPOINTS.XS}) {
     height: auto;
   }
@@ -34,38 +38,37 @@ const FooterTwo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 46px;
-  padding: 10px 0;
-  font-size: 16px;
+  height: 2.875rem;
+  padding-top: 0.625rem 0;
+  font-size: 1rem;
   font-weight: 400;
   color: white;
 
   @media (max-width: ${BREAKPOINTS.LG}) {
+    font-size: 0.875rem;
+    padding: 0.3125rem 0;
   }
 
-  @media (max-width: ${BREAKPOINTS.SM}) {
-  }
   @media (max-width: ${BREAKPOINTS.XS}) {
-    margin-top: 120px;
+    font-size: 0.75rem;
   }
 `;
 
 const FooterOne = styled.div`
   display: flex;
   flex-direction: row;
-  width: 800px;
-  height: 155px;
+  width: 50rem;
+  height: 9.6875rem;
 
   @media (max-width: ${BREAKPOINTS.LG}) {
+    width: 100%;
+    padding: 0 1.25rem;
   }
 
   @media (max-width: ${BREAKPOINTS.SM}) {
-  }
-  @media (max-width: ${BREAKPOINTS.XS}) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: auto;
     height: auto;
   }
 `;
@@ -73,63 +76,70 @@ const FooterOne = styled.div`
 const FooterThree = styled.div`
   display: flex;
   flex-direction: column;
-  width: 144px;
-  height: 59px;
-  gap: 24px;
+  width: 9rem;
+  height: 3.6875rem;
+  gap: 1.5rem;
 `;
+
 const FooterFor = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #5d5d5d;
   font-weight: 700;
 
   @media (max-width: ${BREAKPOINTS.LG}) {
+    font-size: 1.125rem;
   }
 
   @media (max-width: ${BREAKPOINTS.SM}) {
-  }
-  @media (max-width: ${BREAKPOINTS.XS}) {
     align-items: center;
+  }
+
+  @media (max-width: ${BREAKPOINTS.XS}) {
+    font-size: 1rem;
   }
 `;
 
 const FooterDiv = styled.div`
   text-align: start;
-  margin-top: 19px;
+  margin-top: 1.1875rem;
 
   @media (max-width: ${BREAKPOINTS.LG}) {
+    text-align: center;
+    margin-top: 0.625rem;
   }
 
   @media (max-width: ${BREAKPOINTS.SM}) {
+    margin-top: 0.625rem;
   }
+
   @media (max-width: ${BREAKPOINTS.XS}) {
     width: auto;
     height: auto;
     align-items: center;
     justify-items: center;
-    text-align: start;
-    margin-top: 19px;
   }
 `;
+
 const FooterDivTwo = styled.div`
-  width: 417px;
-  height: 125px;
+  width: 26.0625rem;
+  height: 7.8125rem;
 
   @media (max-width: ${BREAKPOINTS.LG}) {
+    width: 100%;
+    height: auto;
   }
 
   @media (max-width: ${BREAKPOINTS.SM}) {
-  }
-  @media (max-width: ${BREAKPOINTS.XS}) {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 0.625rem;
+    margin-right: 0.625rem;
     width: auto;
     height: auto;
   }
@@ -138,24 +148,64 @@ const FooterDivTwo = styled.div`
 const FooterDivSeven = styled.div`
   display: flex;
   flex-direction: column;
-  width: 326px;
-  height: 96px;
+  width: 20.375rem;
+  height: 6rem;
+
+  @media (max-width: ${BREAKPOINTS.LG}) {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: ${BREAKPOINTS.SM}) {
+    width: auto;
+    height: auto;
+  }
 `;
 
 const StyledFooterImageTwo = styled(Image)`
-  width: 180px;
-  height: 41px;
+  width: 11.25rem;
+  height: 2.5625rem;
+
+  @media (max-width: ${BREAKPOINTS.LG}) {
+    width: 10rem;
+    height: 2.25rem;
+  }
+
+  @media (max-width: ${BREAKPOINTS.SM}) {
+    width: 8.75rem;
+    height: 1.9375rem;
+  }
 `;
 
 const StyledFooterImage = styled(Image)`
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
+
+  @media (max-width: ${BREAKPOINTS.LG}) {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  @media (max-width: ${BREAKPOINTS.SM}) {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 `;
 
 const TextFooter = styled.p`
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #7f7f7f;
   font-weight: 400;
+
+  @media (max-width: ${BREAKPOINTS.LG}) {
+    font-size: 0.8125rem;
+  }
+
+  @media (max-width: ${BREAKPOINTS.XS}) {
+    font-size: 0.75rem;
+  }
 `;
 
 const FooterDivFor = styled.div`
@@ -166,11 +216,12 @@ const FooterDivFor = styled.div`
   justify-content: start;
 
   @media (max-width: ${BREAKPOINTS.LG}) {
+    align-items: center;
+    justify-content: center;
+    height: auto;
   }
 
   @media (max-width: ${BREAKPOINTS.SM}) {
-  }
-  @media (max-width: ${BREAKPOINTS.XS}) {
     align-items: center;
     justify-content: center;
     width: auto;
@@ -180,20 +231,21 @@ const FooterDivFor = styled.div`
 
 const FooterDivFive = styled.div`
   display: flex;
-  width: 326px;
-  height: 59px;
-  margin-top: 13px;
-  gap: 35px;
+  width: 20.375rem;
+  height: 3.6875rem;
+  margin-top: 0.8125rem;
+  gap: 2.1875rem;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 
   @media (max-width: ${BREAKPOINTS.LG}) {
+    flex-direction: column;
+    width: auto;
+    height: auto;
   }
 
   @media (max-width: ${BREAKPOINTS.SM}) {
-  }
-  @media (max-width: ${BREAKPOINTS.XS}) {
     flex-direction: column;
     width: auto;
     height: auto;
@@ -203,20 +255,37 @@ const FooterDivFive = styled.div`
 const FooterDivIcons = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 24px;
+  gap: 1.5rem;
 `;
 
 const TextFooterOne = styled.p`
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   align-items: start;
   color: #7f7f7f;
+
+  @media (max-width: ${BREAKPOINTS.LG}) {
+    font-size: 0.875rem;
+  }
+
+  @media (max-width: ${BREAKPOINTS.SM}) {
+    font-size: 0.875rem;
+  }
 `;
+
 const TextFooterTwo = styled.p`
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   align-items: start;
   color: #7f7f7f;
+
+  @media (max-width: ${BREAKPOINTS.LG}) {
+    font-size: 0.875rem;
+  }
+
+  @media (max-width: ${BREAKPOINTS.SM}) {
+    font-size: 0.875rem;
+  }
 `;
 
 const Footer = () => {

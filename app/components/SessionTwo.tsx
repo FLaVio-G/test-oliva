@@ -18,14 +18,19 @@ const MainContainerTwo = styled.div`
   height: 33.375rem;
 
   @media (max-width: ${BREAKPOINTS.LG}) {
-    width: 16.5625rem;
+    width: 100%;
     height: auto;
+    padding: 1rem;
+    margin-top: 13.75rem;
   }
 
   @media (max-width: ${BREAKPOINTS.SM}) {
     flex-direction: column;
+    padding: 1rem;
   }
+
   @media (max-width: ${BREAKPOINTS.XS}) {
+    margin-top: 0rem;
     justify-content: center;
     align-items: center;
   }
@@ -42,26 +47,22 @@ const MainDivTwo = styled.div`
     justify-content: center;
     text-align: center;
     align-items: center;
-    width: 20rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    width: 100%;
+    padding: 0 1rem;
   }
 
   @media (max-width: ${BREAKPOINTS.XS}) {
     justify-content: center;
     text-align: center;
     align-items: center;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    padding: 0 1rem;
   }
 `;
 
 const MainDivThree = styled.div`
   display: flex;
   flex-direction: row;
-  padding-right: 16px;
-  padding-left: 16px;
-  padding-top: 30px;
+  padding: 1rem;
   border-radius: 32px;
   box-shadow: 0px 4px 8px 0px #8585851a, 0px 14px 14px 0px #85858517,
     0px 32px 19px 0px #8585850d, 0px 56px 23px 0px #85858503,
@@ -69,11 +70,12 @@ const MainDivThree = styled.div`
 
   @media (max-width: ${BREAKPOINTS.SM}) {
     flex-direction: column;
+    width: 100%;
+    padding: 1rem;
   }
 
   @media (max-width: ${BREAKPOINTS.XS}) {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 0 1rem;
   }
 `;
 
@@ -82,13 +84,16 @@ const MainDivFour = styled.div`
   height: 464px;
 
   @media (max-width: ${BREAKPOINTS.LG}) {
-    width: auto;
+    width: 100%;
     height: auto;
   }
 
   @media (max-width: ${BREAKPOINTS.SM}) {
     flex-direction: column;
+    width: 100%;
+    height: auto;
   }
+
   @media (max-width: ${BREAKPOINTS.XS}) {
     justify-content: center;
     align-items: center;
@@ -114,23 +119,23 @@ const StyledImageTwo = styled(Image)`
   height: 320.89px;
 
   @media (max-width: ${BREAKPOINTS.LG}) {
-    width: 16.5625rem;
+    width: 100%;
     height: auto;
   }
 
   @media (max-width: ${BREAKPOINTS.MD}) {
-    width: 16.5625rem;
+    width: 100%;
     height: auto;
   }
 
   @media (max-width: ${BREAKPOINTS.SM}) {
-    width: 16.5625rem;
+    width: 100%;
     height: auto;
   }
 
   @media (max-width: ${BREAKPOINTS.XS}) {
     margin-top: 2rem;
-    width: 16.5625rem;
+    width: 100%;
     height: auto;
   }
 `;
@@ -144,6 +149,10 @@ const H1 = styled.h1`
     display: flex;
     font-size: 1.8125rem;
   }
+
+  @media (max-width: ${BREAKPOINTS.SM}) {
+    font-size: 1.5rem;
+  }
 `;
 
 const P = styled.p`
@@ -156,7 +165,11 @@ const P = styled.p`
   justify-content: start;
 
   @media (max-width: ${BREAKPOINTS.LG}) {
-    font-size: 0.8125rem;
+    font-size: 1rem;
+  }
+
+  @media (max-width: ${BREAKPOINTS.SM}) {
+    font-size: 1rem;
   }
 
   @media (max-width: ${BREAKPOINTS.XS}) {

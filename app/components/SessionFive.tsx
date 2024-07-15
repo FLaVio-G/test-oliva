@@ -1,34 +1,38 @@
 import styled from "styled-components";
 import { BREAKPOINTS } from "../styles/Breakpoints";
-import { Button, Checkbox, Form, Input, Select } from "antd";
+import { Input, Form, Checkbox, Button, Select } from "antd";
+
 import { useState } from "react";
 
 const StyledInputTwo = styled(Input)`
   display: flex;
-  border: 1.5px solid #c6b92d;
-  border-radius: 8px;
-  font-size: 20px;
-  height: 156px;
-  width: 870px;
+  border: 0.09375rem solid #c6b92d;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  height: 9.75rem;
+  width: 54.375rem;
+
   &:hover {
     border-color: #c6b92d;
   }
+
   &:focus {
     border-color: #c6b92d;
   }
 
   @media (max-width: ${BREAKPOINTS.LG}) {
     width: 16.5625rem;
-    height: 156px;
+    height: 9.75rem;
   }
 
   @media (max-width: ${BREAKPOINTS.SM}) {
     width: 16.5625rem;
-    height: 156px;
+    height: 9.75rem;
   }
+
   @media (max-width: ${BREAKPOINTS.XS}) {
     width: 16.5625rem;
-    height: 156px;
+    height: 9.75rem;
   }
 `;
 
@@ -37,13 +41,6 @@ const StyledFormItemTwo = styled(Form.Item)`
   width: 100%;
   align-items: center;
   justify-content: center;
-
-  .ant-form-item-label > label {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.5;
-    color: #5d5d5d;
-  }
 
   .ant-form-item-label
     > label.ant-form-item-required:not(
@@ -61,45 +58,55 @@ const DivFormEight = styled.div`
 const StyledFormItemThree = styled(Form.Item)`
   display: flex;
   width: 100%;
-  :where(&.ant-col-offset-8) {
-    margin-inline-start: 0;
-  }
-`;
-
-const StyledTextArea = styled(Input.TextArea)`
-  width: 100%;
+  align-items: center;
+  justify-content: space-between; // Alinha os itens de forma que ocupem o espaço total
 `;
 
 const StyledCheckbox = styled(Checkbox)`
+  flex: 1;
   display: flex;
   align-items: start;
-  margin: 0px;
+  margin: 0;
+  font-size: 18px;
 `;
 
 const DivFormThree = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 24px;
-  margin-top: 24px;
   width: 100%;
+  margin: 0;
+  gap: 24px;
+  margin-bottom: 48px;
 
   @media (max-width: ${BREAKPOINTS.LG}) {
+    flex-direction: column;
+    width: 100%;
+    gap: 34px;
+    margin-bottom: 34px;
   }
 
   @media (max-width: ${BREAKPOINTS.SM}) {
+    flex-direction: column;
   }
+
+  @media (max-width: ${BREAKPOINTS.XS}) {
+    flex-direction: column;
+  }
+
   @media (max-width: ${BREAKPOINTS.XS}) {
     width: 16.5625rem;
     height: auto;
     flex-direction: column;
-    margin-top: 0px;
+    margin: 0;
+    gap: 0px;
+    margin-bottom: 0px;
   }
 `;
 
 const ButtonSeven = styled(Button)`
-  width: 360px;
-  height: 64px;
-  border-radius: 50px;
+  width: 22.5rem;
+  height: 4rem;
+  border-radius: 3.125rem;
   background-color: #c6b92d;
   color: white;
   border: none;
@@ -108,6 +115,7 @@ const ButtonSeven = styled(Button)`
     background-color: #45a049;
     color: white;
   }
+
   &:focus {
     background-color: #4caf50;
     color: white;
@@ -123,51 +131,28 @@ const DivFormSeven = styled.div`
   display: flex;
   width: 100%;
   height: auto;
-  margin-top: 56px;
   align-items: center;
   justify-content: center;
 
-  @media (max-width: ${BREAKPOINTS.LG}) {
-  }
-
-  @media (max-width: ${BREAKPOINTS.SM}) {
-  }
   @media (max-width: ${BREAKPOINTS.XS}) {
-    margin-top: 0px;
+    margin-top: 0;
   }
 `;
 
 const Div = styled.div`
-  font-size: 38px;
+  font-size: 2.375rem;
   font-weight: 500;
   color: #c6b92d;
 `;
 
 const H5 = styled.span`
-  font-size: 38px;
+  font-size: 2.375rem;
   font-weight: 500;
   color: #5d5d5d;
 `;
 
-const DivThree = styled.div`
-  display: flex;
-  flex-direction: row;
-  padding-right: 16px;
-  padding-left: 16px;
-  padding-top: 30px;
-
-  @media (max-width: ${BREAKPOINTS.SM}) {
-    flex-direction: column;
-  }
-
-  @media (max-width: ${BREAKPOINTS.XS}) {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-`;
-
 const P3 = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
 `;
 
@@ -176,18 +161,19 @@ const MainContainerFive = styled.div`
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  width: 870px;
-
-  padding-top: 240px;
+  width: 54.375rem;
+  margin-top: 126px;
 
   @media (max-width: ${BREAKPOINTS.LG}) {
     width: 16.5625rem;
     height: auto;
+    margin-top: 0px;
   }
 
   @media (max-width: ${BREAKPOINTS.SM}) {
     flex-direction: column;
   }
+
   @media (max-width: ${BREAKPOINTS.XS}) {
     justify-content: center;
     align-items: center;
@@ -196,112 +182,171 @@ const MainContainerFive = styled.div`
 
 const DivFormOne = styled.div`
   display: flex;
+  padding-top: 64px;
+  width: 100%;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
   text-align: center;
+
+  @media (max-width: ${BREAKPOINTS.LG}) {
+    width: 15.625rem;
+    height: auto;
+  }
+
+  @media (max-width: ${BREAKPOINTS.SM}) {
+    width: 2rem;
+    height: auto;
+  }
+
+  @media (max-width: ${BREAKPOINTS.XS}) {
+    width: 15.625rem;
+    height: auto;
+    margin-top: 0;
+  }
 `;
-
-const FooterDivText = styled.div``;
-
-const FooterFive = styled.div``;
 
 const DivFormTwo = styled.div`
   display: flex;
   align-items: center;
   justify-items: center;
   text-align: center;
-  margin-top: 24px;
+  margin-top: 1.5rem;
 `;
-
-type FieldType = {
-  username?: string;
-  password?: string;
-  remember?: string;
-};
-
-const SubmitButton = styled(Button)`
-  margin-left: 8px;
-`;
-
-const onFinish = (values: FieldType) => {
-  console.log("Success:", values);
-};
 
 const onFinishFailed = (errorInfo: any) => {
   console.log("Failed:", errorInfo);
 };
 
 const StyledForm = styled(Form)`
-  margin-top: 30px;
+  margin-top: 64px;
 `;
 
 const StyledInput = styled(Input)`
-  border: 1.5px solid #c6b92d;
-  margin-top: 8px;
-  border-radius: 8px;
-  width: 423px;
-  height: 56px;
-  font-size: 20px;
+  border: 0.09375rem solid #c6b92d;
+  border-radius: 0.5rem;
+  width: 26.4375rem;
+  height: 3.5rem;
+  font-size: 1.25rem;
+
   &:hover {
     border-color: #c6b92d;
   }
+
   &:focus {
     border-color: #c6b92d;
   }
 
   @media (max-width: ${BREAKPOINTS.LG}) {
-    width: 250px;
+    width: 100%;
     height: auto;
   }
 
   @media (max-width: ${BREAKPOINTS.SM}) {
-    width: 223px;
+    width: 10.625rem;
     height: auto;
   }
+
   @media (max-width: ${BREAKPOINTS.XS}) {
-    width: 250px;
+    width: 15.625rem;
     height: auto;
-    margin-top: 0px;
+    margin-top: 0;
   }
 `;
 
 const StyledFormItem = styled(Form.Item)`
   flex: 1;
-  padding-top: 24px;
+`;
 
-  .ant-form-item-label
-    > label.ant-form-item-required:not(
-      .ant-form-item-required-mark-optional
-    )::before {
-    display: none;
+const DivSeven = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-size: 2.375rem;
+  font-weight: 500;
+  gap: 1rem;
+  color: #5d5d5d;
+  white-space: nowrap;
+
+  @media (max-width: ${BREAKPOINTS.LG}) {
+    width: 50%;
+    height: auto;
   }
 
-  .ant-form-item-label > label {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.5;
-    color: #5d5d5d;
+  @media (max-width: ${BREAKPOINTS.SM}) {
+    flex-direction: column;
+    align-items: center;
+    white-space: normal;
+  }
+
+  @media (max-width: ${BREAKPOINTS.XS}) {
+    width: 50%;
+    height: auto;
+  }
+`;
+
+const StyledText = styled.span`
+  font-size: 2.375rem;
+  font-weight: 500;
+  white-space: nowrap;
+
+  &.highlight {
+    color: #c6b92d;
+  }
+
+  @media (max-width: ${BREAKPOINTS.LG}) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: ${BREAKPOINTS.SM}) {
+    font-size: 1.75rem;
+  }
+
+  @media (max-width: ${BREAKPOINTS.XS}) {
+    font-size: 1.5rem;
   }
 `;
 
 const { Option } = Select;
 
 const StyledSelect = styled(Select)`
-  border: 1.5px solid #c6b92d;
-  margin-top: 8px;
-  border-radius: 8px;
-  width: 50px;
-  height: 56px;
-  font-size: 20px;
+  width: 26.4375rem;
+  height: 2.5rem;
+  height: 3.5rem;
+  font-size: 1.25rem;
+  border: 0.09375rem solid #c6b92d;
+  border-radius: 0.5rem;
+
+  .ant-select-selector {
+    height: 40px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+  }
 
   @media (max-width: ${BREAKPOINTS.LG}) {
+    width: 15.625rem;
+    height: auto;
   }
 
   @media (max-width: ${BREAKPOINTS.SM}) {
+    width: 13.9375rem;
+    height: auto;
   }
+
   @media (max-width: ${BREAKPOINTS.XS}) {
-    margin-top: 0px;
+    width: 250px !important;
+    height: auto;
+    margin-top: 0;
   }
+`;
+
+export const StyledLabel = styled.label`
+  font-size: 20px;
+  white-space: nowrap;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #5d5d5d;
+  display: block;
 `;
 
 const SessionFive = () => {
@@ -323,9 +368,10 @@ const SessionFive = () => {
     <>
       <MainContainerFive>
         <DivFormOne>
-          <Div>
-            Entre em contato e <H5>receba atendimento</H5>
-          </Div>
+          <DivSeven>
+            <StyledText>Entre em contato e</StyledText>
+            <StyledText className="highlight">receba atendimento</StyledText>
+          </DivSeven>
         </DivFormOne>
 
         <DivFormTwo>
@@ -338,8 +384,6 @@ const SessionFive = () => {
 
         <StyledForm
           name="basic"
-          labelCol={{ span: 8 }}
-          wrapperCol={{ span: 16 }}
           initialValues={{ remember: true, prefix: "86" }}
           onFinishFailed={onFinishFailed}
           autoComplete="off"
@@ -347,22 +391,16 @@ const SessionFive = () => {
           <DivFormThree>
             <StyledFormItem
               name="username"
-              label="Nome completo"
+              label={<StyledLabel>Nome completo</StyledLabel>}
               layout="vertical"
-              rules={[{ required: true }]}
-              labelCol={{ span: 20 }}
-              wrapperCol={{ span: 24 }}
             >
               <StyledInput />
             </StyledFormItem>
 
             <StyledFormItem
-              label="E-mail corporativo"
+              label={<StyledLabel>E-mail corporativo</StyledLabel>}
               name="email"
               layout="vertical"
-              rules={[{ required: true }]}
-              labelCol={{ span: 24 }}
-              wrapperCol={{ span: 24 }}
             >
               <StyledInput />
             </StyledFormItem>
@@ -371,45 +409,36 @@ const SessionFive = () => {
           <DivFormThree>
             <StyledFormItem
               name="phone"
-              label="Telefone"
+              label={<StyledLabel>Telefone</StyledLabel>}
               layout="vertical"
-              rules={[{ required: true }]}
-              labelCol={{ span: 24 }}
-              wrapperCol={{ span: 24 }}
             >
               <StyledInput />
             </StyledFormItem>
 
             <StyledFormItem
-              label="Qual sua função na empresa"
+              label={<StyledLabel>Qual sua função na empresa</StyledLabel>}
               name="function"
               layout="vertical"
-              rules={[{ required: true }]}
-              labelCol={{ span: 24 }}
-              wrapperCol={{ span: 24 }}
             >
               <StyledSelect>
-                <Option value="demo">Demo Option</Option>
-                <Option value="option1">Option 1</Option>
-                <Option value="option2">Option 2</Option>
+                <Option value="demo">UX</Option>
+                <Option value="option1">Front</Option>
+                <Option value="option2">Back</Option>
               </StyledSelect>
             </StyledFormItem>
           </DivFormThree>
         </StyledForm>
         <DivFormSeven>
           <StyledFormItemTwo
-            label="Mensagem"
+            label={<StyledLabel>Mensagem</StyledLabel>}
             name="textArea"
             layout="vertical"
-            rules={[{ required: true }]}
-            labelCol={{ span: 24 }}
-            wrapperCol={{ span: 24 }}
           >
             <StyledInputTwo />
           </StyledFormItemTwo>
         </DivFormSeven>
         <DivFormEight>
-          <StyledFormItemThree wrapperCol={{ offset: 8, span: 16 }}>
+          <StyledFormItemThree>
             <StyledCheckbox
               checked={componentDisabled}
               onChange={(e) => setComponentDisabled(e.target.checked)}

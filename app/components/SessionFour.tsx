@@ -2,9 +2,12 @@ import styled from "styled-components";
 import { BREAKPOINTS } from "../styles/Breakpoints";
 import { Button, Pagination } from "antd";
 import Image from "next/image";
+import Slider from "react-slick";
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const MainContainerThree = styled.div`
   display: flex;
@@ -16,6 +19,7 @@ const MainContainerThree = styled.div`
   height: 33.375rem;
 
   @media (max-width: ${BREAKPOINTS.LG}) {
+    margin-top: 52px;
     width: 16.5625rem;
     height: auto;
   }
@@ -60,10 +64,12 @@ const DivEleven = styled.div`
   gap: 24px;
   flex-direction: row;
   width: 1253px;
+  height: 464px;
 
   @media (max-width: ${BREAKPOINTS.LG}) {
+    flex-direction: row;
+    margin-left: 10px;
     width: auto;
-    height: auto;
   }
 
   @media (max-width: ${BREAKPOINTS.SM}) {
@@ -103,14 +109,16 @@ const CardDiv = styled.div`
     0px 88px 25px 0px #85858500;
 
   @media (max-width: ${BREAKPOINTS.LG}) {
-    width: 16.5625rem;
+    width: auto;
     height: auto;
   }
 
   @media (max-width: ${BREAKPOINTS.SM}) {
+    width: auto;
     flex-direction: column;
   }
   @media (max-width: ${BREAKPOINTS.XS}) {
+    width: auto;
     justify-content: center;
     align-items: center;
   }
@@ -187,30 +195,7 @@ const P3 = styled.p`
   font-weight: 400;
 `;
 
-const StyledImageFive = styled(Image)`
-  width: 346px;
-  height: 185px;
-
-  @media (max-width: ${BREAKPOINTS.LG}) {
-    width: 346px;
-    height: auto;
-  }
-
-  @media (max-width: ${BREAKPOINTS.MD}) {
-    width: 346px;
-    height: auto;
-  }
-
-  @media (max-width: ${BREAKPOINTS.SM}) {
-    width: 250px;
-    height: auto;
-  }
-
-  @media (max-width: ${BREAKPOINTS.XS}) {
-    width: 200px;
-    height: auto;
-  }
-`;
+const StyledImageFive = styled(Image)``;
 
 const StyledPagination = styled(Pagination)`
   .ant-pagination-item {
@@ -265,6 +250,8 @@ const SessionFour = () => {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const postsPerPage = 3;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -285,6 +272,13 @@ const SessionFour = () => {
     fetchData();
   }, []);
 
+  const handlePaginationChange = (page: number) => {
+    setCurrentPage(page);
+  };
+
+  const startIndex = (currentPage - 1) * postsPerPage;
+  const currentPosts = posts.slice(startIndex, startIndex + postsPerPage);
+
   if (loading) {
     return <p>Loading...</p>;
   }
@@ -292,6 +286,7 @@ const SessionFour = () => {
   if (error) {
     return <p>Error: {error}</p>;
   }
+
   return (
     <>
       <MainContainerThree>
@@ -299,14 +294,15 @@ const SessionFour = () => {
           <H3>Últimas do Blog</H3>
         </MainDivTwo>
         <DivEleven>
-          {posts.slice(0, 3).map((post) => (
+          {currentPosts.map((post) => (
             <CardDiv key={post.id}>
               {post.yoast_head_json.og_image[0]?.url && (
                 <StyledImageFive
                   src={post.yoast_head_json.og_image[0].url}
                   alt={post.title.rendered}
-                  width={500}
+                  width={400}
                   height={300}
+                  layout="responsive"
                 />
               )}
               <CardDivOne>
@@ -321,11 +317,15 @@ const SessionFour = () => {
         </DivEleven>
         <DivNine>
           <StyledPagination
-            defaultCurrent={1}
-            total={30}
+            current={currentPage}
+            total={posts.length}
+            pageSize={postsPerPage}
+            onChange={handlePaginationChange}
             itemRender={(page, type, originalElement) => {
               if (type === "page") {
-                return <YellowDot />;
+                return page <= currentPage + 1 && page >= currentPage - 1 ? (
+                  <YellowDot />
+                ) : null;
               } else if (type === "prev" || type === "next") {
                 return null;
               }
